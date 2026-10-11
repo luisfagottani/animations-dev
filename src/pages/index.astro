@@ -1,0 +1,14 @@
+---
+import { LabShell } from "../components/lab-shell";
+import { SimpleTransform } from "../exercises/SimpleTransform/SimpleTransform";
+import { Sonner } from "../exercises/Sonner/Sonner";
+import Base from "../layouts/Base.astro";
+---
+
+<Base>
+  <title slot="head">animations.dev — lab</title>
+  <LabShell client:load>
+    <Sonner client:load />
+    <SimpleTransform client:load />
+  </LabShell>
+</Base>
