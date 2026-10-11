@@ -12,7 +12,7 @@ export const card = style({
   gridArea: "1 / 1",
   height: "74px",
   transform:
-    "scale(calc( 1 - var(--index) * var(--scale-increment))) translateY(calc(var(--index) * var(--translate-increment)))",
+    "scale(calc(1 - var(--index) * var(--scale-increment))) translateY(calc(var(--index) * var(--translate-increment)))",
   vars: {
     "--scale-increment": "0.05",
     "--translate-increment": "-13%",

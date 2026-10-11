@@ -5,6 +5,7 @@ export const wrapper = style({
 });
 
 export const ballWrapper = style({
+  cursor: "pointer",
   position: "relative",
 });
 
@@ -15,11 +16,9 @@ export const ball = style({
   position: "relative",
   selectors: {
     [`${ballWrapper}:hover &`]: {
-      cursor: "pointer",
       transform: "translateY(-20%)",
     },
   },
-
   transition: "transform 0.2s ease",
   width: "56px",
 });

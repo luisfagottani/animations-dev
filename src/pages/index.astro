@@ -1,14 +1,9 @@
 ---
-import { LabShell } from "../components/lab-shell";
-import { SimpleTransform } from "../exercises/SimpleTransform/SimpleTransform";
-import { Sonner } from "../exercises/Sonner/Sonner";
-import Base from "../layouts/Base.astro";
+import { ExercisesLab } from "../components/exercises-lab";
+import Base from "../layouts/base.astro";
 ---
 
 <Base>
   <title slot="head">animations.dev — lab</title>
-  <LabShell client:load>
-    <Sonner client:load />
-    <SimpleTransform client:load />
-  </LabShell>
+  <ExercisesLab client:load />
 </Base>

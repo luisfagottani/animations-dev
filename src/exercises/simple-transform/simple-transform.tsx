@@ -1,4 +1,4 @@
-import { ball, ballWrapper, wrapper } from "./SimpleTransform.css";
+import { ball, ballWrapper, wrapper } from "./simple-transform.css";
 
 export const SimpleTransform = () => (
   <div className={wrapper}>
