@@ -43,6 +43,7 @@ export const stage = style({
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.lg,
   display: "grid",
+  gap: vars.space.lg,
   minHeight: "320px",
   padding: vars.space.lg,
   placeItems: "center",
