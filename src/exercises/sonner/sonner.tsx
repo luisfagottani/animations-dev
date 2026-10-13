@@ -1,19 +1,33 @@
-import { card, wrapper } from "./sonner.css";
+import { useCallback, useState } from "react";
+import { buttonAddToast, card, toaster, wrapper } from "./sonner.css";
 
 export const Sonner = () => {
-  const teste = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  const [toasts, setToasts] = useState(0);
+  const addToast = useCallback(() => {
+    setToasts((prev) => prev + 1);
+  }, []);
+
+  const array = Array.from({ length: toasts });
 
   return (
     <div className={wrapper}>
-      {teste.map((item, index) => (
-        <div
-          className={card}
-          key={item}
-          style={{ "--index": teste.length - 1 - index } as React.CSSProperties}
-        >
-          <h1>{item}</h1>
-        </div>
-      ))}
+      <div className={toaster}>
+        {array.map((_, index) => (
+          <div
+            className={card}
+            // biome-ignore lint/suspicious/noArrayIndexKey: this is a bootcamp exercise
+            key={index}
+            style={
+              { "--index": array.length - 1 - index } as React.CSSProperties
+            }
+          >
+            <h1>{toasts - 1 - index}</h1>
+          </div>
+        ))}
+      </div>
+      <button className={buttonAddToast} onClick={addToast} type="button">
+        Add toast
+      </button>
     </div>
   );
 };
